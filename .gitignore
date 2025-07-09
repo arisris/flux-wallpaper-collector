@@ -1,0 +1,8 @@
+test/
+data/
+node_modules/
+.genkit/
+.venv/
+.env
+__pycache__
+*.js
