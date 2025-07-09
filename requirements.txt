@@ -8,3 +8,4 @@ google-genai==1.2.0
 python-multipart==0.0.20
 huggingface-hub==0.33.2
 python-dotenv==1.1.1
+tqdm
