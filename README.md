@@ -58,26 +58,6 @@ This application is built with efficiency and user experience in mind, using Fas
     ```
 
 3.  **Install Dependencies**
-    Create a file named `requirements.txt` with the content below.
-
-    **`requirements.txt`**:
-
-    ```txt
-    fastapi==0.115.13
-    uvicorn[standard]==0.35.0
-    Jinja2==3.1.6
-    pydantic==2.11.7
-    pillow==11.3.0
-    httpx==0.27.0
-    google-generativeai==1.2.0
-    python-multipart==0.0.20
-    huggingface-hub
-    python-dotenv==1.1.1
-    tqdm
-    ```
-
-    Then, run the installation command:
-
     ```bash
     pip install -r requirements.txt
     ```
@@ -92,7 +72,7 @@ This application is built with efficiency and user experience in mind, using Fas
     GOOGLE_GENAI_API_KEY="YOUR_GOOGLE_API_KEY_HERE"
 
     # The Gemini model to use for prompt generation
-    GOOGLE_GENAI_MODEL="gemini-1.5-flash-preview-0617"
+    GOOGLE_GENAI_MODEL="gemini-2.5-flash-lite-preview-06-17"
 
     # (Optional) Your Hugging Face Dataset Repo ID (e.g., username/repo-name)
     HF_DATASET_REPO_ID="YOUR_HF_DATASET_REPO_ID_HERE"
@@ -100,7 +80,7 @@ This application is built with efficiency and user experience in mind, using Fas
     # (Optional) Your Hugging Face access token with write permissions (https://huggingface.co/settings/tokens)
     HF_SECRET="YOUR_HF_SECRET_TOKEN_HERE"
 
-    # Image generator API URL. Default is set to Pollinations.ai
+    # Image generator API URL Template.
     IMAGE_GENERATOR_URL_TEMPLATE="https://image.pollinations.ai/prompt/{prompt}?width={width}&height={height}&seed={seed}&nologo=true"
     ```
 
@@ -136,7 +116,7 @@ You can also run the script directly from your terminal.
 
     ```bash
     # Generate 20 images for the topic "Cyberpunk Cityscape"
-    python wpg.py "Cyberpunk Cityscape" --num 20
+    dotenv run python wpg.py "Cyberpunk Cityscape" --num 20
     ```
 
   * **Start Synchronization**:
