@@ -59,7 +59,7 @@ PROMPT_BATCH_SIZE = 50
 # --- Environment Variables ---
 IMAGE_GENERATOR_URL_TEMPLATE = os.getenv("IMAGE_GENERATOR_URL_TEMPLATE")
 GOOGLE_GENAI_API_KEY = os.getenv("GOOGLE_GENAI_API_KEY")
-GOOGLE_GENAI_MODEL = os.getenv("GOOGLE_GENAI_MODEL", "gemini-1.5-flash")
+GOOGLE_GENAI_MODEL = os.getenv("GOOGLE_GENAI_MODEL", "gemini-2.5-flash")
 HF_DATASET_REPO_ID = os.getenv("HF_DATASET_REPO_ID")
 HF_SECRET = os.getenv("HF_SECRET")
 
